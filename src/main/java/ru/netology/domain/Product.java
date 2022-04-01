@@ -18,4 +18,12 @@ public class Product {
     public String getTitle() {
         return title;
     }
+
+    public boolean matches(String search) {
+        if (getTitle().contains(search)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
