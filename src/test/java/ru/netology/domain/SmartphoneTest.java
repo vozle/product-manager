@@ -9,8 +9,12 @@ class SmartphoneTest {
     private Smartphone second = new Smartphone(2, "M-65", 13000, "Siemens");
 
     @Test
-    void matches() {
+    void matchesTrue() {
         assertTrue(first.matches("Siemens"));
+    }
+
+    @Test
+    void matchesFalse() {
         assertFalse(second.matches("Samsung"));
     }
 }

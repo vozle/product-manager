@@ -9,8 +9,12 @@ class BookTest {
     private Book second = new Book(2, "War & Peace", 500, "L. Tolstoy");
 
     @Test
-    void matches() {
+    void matchesTrue() {
         assertTrue(first.matches("Tolstoy"));
+    }
+
+    @Test
+    void matchesFalse() {
         assertFalse(second.matches("Chekhov"));
     }
 }

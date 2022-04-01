@@ -9,8 +9,12 @@ class ProductTest {
     private Product second = new Product(2, "Wild Garlic", 8000);
 
     @Test
-    void matches() {
+    void matchesTrue() {
         assertTrue(first.matches("Garlic"));
+    }
+
+    @Test
+    void matchesFalse() {
         assertFalse(second.matches("Onion"));
     }
 }
